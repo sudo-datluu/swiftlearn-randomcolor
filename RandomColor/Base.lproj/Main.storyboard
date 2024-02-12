@@ -16,20 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8Y-vE-uDk">
-                                <rect key="frame" x="177.66666666666666" y="446.66666666666669" width="75" height="39"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPN-8v-wca">
+                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="tempButtonTapped:" destination="06G-As-iOl" eventType="touchUpInside" id="EDr-Ev-wkc"/>
+                                    <outlet property="dataSource" destination="06G-As-iOl" id="XII-mv-0zW"/>
+                                    <outlet property="delegate" destination="06G-As-iOl" id="4Ea-mz-4ph"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ta-zs-syX"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L8Y-vE-uDk" firstAttribute="centerX" secondItem="gNN-kb-wCJ" secondAttribute="centerX" id="bw6-ap-0aZ"/>
-                            <constraint firstItem="L8Y-vE-uDk" firstAttribute="centerY" secondItem="gNN-kb-wCJ" secondAttribute="centerY" id="zLA-XK-5mp"/>
+                            <constraint firstItem="rPN-8v-wca" firstAttribute="leading" secondItem="3ta-zs-syX" secondAttribute="leading" id="51I-uP-48J"/>
+                            <constraint firstItem="rPN-8v-wca" firstAttribute="top" secondItem="3ta-zs-syX" secondAttribute="top" id="WBk-1Y-4Ho"/>
+                            <constraint firstItem="3ta-zs-syX" firstAttribute="bottom" secondItem="rPN-8v-wca" secondAttribute="bottom" id="vHr-pJ-WKw"/>
+                            <constraint firstItem="3ta-zs-syX" firstAttribute="trailing" secondItem="rPN-8v-wca" secondAttribute="trailing" id="xMZ-sr-f38"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Colors" id="zlx-3H-AWY"/>
@@ -79,9 +81,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
